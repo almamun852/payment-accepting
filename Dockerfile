@@ -32,7 +32,7 @@ RUN rm -rf /var/www/html
 # Copy existing application directory contents
 COPY . /var/www
 
-RUN composer update
+RUN composer install
 
 # Copy existing application directory permissions
 COPY --chown=www-data:www-data . /var/www
